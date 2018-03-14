@@ -1,18 +1,12 @@
 // based on an orginal sketch by Arduino forum member "danigom"
-
 // http://forum.arduino.cc/index.php?action=profile;u=188950
-
 // http://tronixstuff.com/2013/10/11/tutorial-arduino-max7219-led-display-driver-ic/
-
 // Nicu FLORICA change sketch for made Thermometer with DS18B20
-
 // see more at http://www.tehnic.go.ro &
-
 // http://www.arduinotehniq.com/
-
+// this version work on new Arduino IDE:
 // The way PROGMEM is used has been changed.
-//const  prog_uchar ---> const unsigned char
-
+// const  prog_uchar ---> const unsigned char
 
 // for DS18B20 - http://arduinoprojects.ru/2014/08/%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B9-%D1%82%D0%B5%D1%80%D0%BC%D0%BE%D1%81%D1%82%D0%B0%D1%82-%D0%BD%D0%B0-arduino-%D0%B8-%D1%86%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%BC-%D1%82%D0%B5%D1%80%D0%BC/
 
@@ -54,25 +48,25 @@ RTC_DS1307 RTC; // Tells the RTC library that we're using a DS1307 RTC
 
  
 
-unsigned char logo[] PROGMEM ={
+const unsigned char logo[] PROGMEM ={
 
     "  Clock & Termomether on 32x8 led matrix with MAX7219 by niq_ro     \0"};
 
 
 
-unsigned char guma[] PROGMEM ={
+const unsigned char guma[] PROGMEM ={
 
     "           \0"};
 
-unsigned char temperatura[] PROGMEM ={
+const unsigned char temperatura[] PROGMEM ={
 
     "  temperatura: \0"};
 
-unsigned char data[] PROGMEM ={
+const unsigned char data[] PROGMEM ={
 
     "  data: \0"};
 
-unsigned char ceas[] PROGMEM ={
+const unsigned char ceas[] PROGMEM ={
 
     "  ceas: \0"};
 
@@ -140,7 +134,7 @@ sensors.begin();
 
  
 
-unsigned char font5x7 [] PROGMEM = {      //Numeric Font Matrix (Arranged as 7x font data + 1x kerning data)
+const unsigned char font5x7 [] PROGMEM = {      //Numeric Font Matrix (Arranged as 7x font data + 1x kerning data)
 
     B00000000,  //Space (Char 0x20)
 
